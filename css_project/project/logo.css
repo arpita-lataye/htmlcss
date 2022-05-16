@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+}
+.navbar{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    margin-right:  50px; 
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+#taggler,
+.navbar label{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .menu{
+        width: 100%;
+    }
+    
+}

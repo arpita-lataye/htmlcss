@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-btn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+.box-btn .btn-nav::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 5px;
+    top: 5px;
+    border-radius:5px ;
+    background-color: #00dd5f;
+    transition: all .5s;
+}
+.box-btn .btn-nav::before{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 5px;
+    top: 25px;
+    border-radius:5px ;
+    background-color: #00dd5f;
+    transition: all .5s;
+}
+.box-btn input{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 9;
+}
+.box-btn input:checked~.btn-nav::after{
+    transform: rotate(45deg);
+    transform-origin: 11px 5px;
+    animation: effects .5s linear;
+}
+.box-btn input:checked~.btn-nav::before{
+    transform: rotate(-45deg);
+    transform-origin: 13px 0;
+    animation: effects .5s linear alternate-reverse;
+}
+@keyframes effects{
+    100%{transform: rotate(360deg);}
+}
